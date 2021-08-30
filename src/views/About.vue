@@ -1,11 +1,17 @@
 <template>
   <div class="about">
-    <h1>This page will be dedicated to adding New Items</h1>
+    <h1>Add new todo list items in the form below:</h1>
+    <new-item></new-item>
   </div>
 </template>
 
 <script>
-
+import NewItem from "../components/NewItem";
+export default{
+  components:{
+    NewItem
+  }
+}
 </script>
 
 <style>

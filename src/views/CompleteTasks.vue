@@ -1,33 +1,30 @@
 <template>
-  <div class="home">
-    <h1>{{heading}}</h1>
+  <div>
+    <h1>{{ heading }}</h1>
     <ul>
       <the-list v-for="(todo, index) in todos"
                 :key="todo.id"
                 :todo='todo'
-                :status='false'
+                :status='true'
                 v-on:mark-done="completeTask($event)"
                 v-on:remove="todos.splice(index, 1)"
       ></the-list>
     </ul>
-    <new-item></new-item>
-    </div>
+  </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import store from "../store.js"
-import TheList from "../components/TheList"
-import NewItem from "../components/NewItem";
+import store from "@/store.js"
+import TheList from "@/components/TheList"
+
 export default {
-  name: "Home",
+  name: "CompleteTasks",
   components: {
-      TheList,
-      NewItem
+    TheList
   },
   data(){
     return{
-      heading: "Todo List",
+      heading: "Completed Todo items",
       todos: store.todos
     }
   },
@@ -36,5 +33,9 @@ export default {
       todo.completed = !todo.completed
     }
   }
-};
+}
 </script>
+
+<style scoped>
+
+</style>
