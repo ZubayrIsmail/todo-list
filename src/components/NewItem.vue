@@ -25,7 +25,7 @@
         ></b-form-input>
       </b-col>
     </b-row>
-    <b-button class="divider" size="lg">Add</b-button>
+    <b-button @click="addNewTodo" class="divider" size="lg">Add</b-button>
   </form>
   </b-container>
 </template>
