@@ -6,9 +6,9 @@
                 :key="todo.id"
                 :todo='todo'
                 :status='false'
-                v-on:mark-done="completeTask($event)"
-                v-on:remove="todos.splice(index, 1)"
-                v-on:edit-item="editItem($event)"
+                @mark-done="completeTask($event)"
+                @remove="todos.splice(index, 1)"
+                @edit-item="editItem($event)"
       ></the-list>
     </ul>
     <new-item></new-item>

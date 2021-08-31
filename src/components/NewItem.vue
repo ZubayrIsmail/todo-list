@@ -34,8 +34,8 @@
 import store from "../store.js"
 
 export default {
-  data(){
-    return{
+  data () {
+    return {
       todos: store.todos,
       newTodoName:'',
       newTodoDescription:''
@@ -46,7 +46,7 @@ export default {
   ],
   name: "NewItem",
   methods: {
-    addNewTodo() {
+    addNewTodo () {
       this.todos.push({
         id: Object.keys(this.todos).length + 1,
         name: this.newTodoName,
