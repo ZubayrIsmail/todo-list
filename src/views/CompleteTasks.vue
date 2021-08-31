@@ -14,8 +14,8 @@
 </template>
 
 <script>
-import store from "@/store.js"
-import TheList from "@/components/TheList"
+import store from "../store.js"
+import TheList from "../components/TheList"
 
 export default {
   name: "CompleteTasks",

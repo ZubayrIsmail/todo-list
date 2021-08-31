@@ -1,19 +1,33 @@
 <template>
+  <b-container>
   <form v-on:submit.prevent="addNewTodo">
-    <label for="new-todo">Add a todo</label>
-    <input
-        v-model="newTodoName"
-        id="new-todo"
-        placeholder="What needs to be done"
-    >
-    <label for="new-todo">Todo description</label>
-    <input
-        v-model="newTodoDescription"
-        id="new-todo2"
-        placeholder="Describe what must be done"
-    >
-    <button>Add</button>
+    <b-row class="my-1">
+      <b-col sm="2">
+        <label>Add a todo:</label>
+      </b-col>
+      <b-col sm="10">
+        <b-form-input
+            v-model="newTodoName"
+            id="new-todo"
+            placeholder="What needs to be done"
+        ></b-form-input>
+      </b-col>
+    </b-row>
+    <b-row class="my-1">
+      <b-col sm="2">
+        <label>Todo description:</label>
+      </b-col>
+      <b-col sm="10">
+        <b-form-input
+            v-model="newTodoDescription"
+            id="new-todo2"
+            placeholder="Describe what must be done"
+        ></b-form-input>
+      </b-col>
+    </b-row>
+    <b-button class="divider" size="lg">Add</b-button>
   </form>
+  </b-container>
 </template>
 
 <script>
@@ -47,5 +61,9 @@ export default {
 </script>
 
 <style scoped>
-
+.divider{
+  margin:2px;
+  height:auto;
+  display:inline-block;
+}
 </style>

@@ -8,6 +8,7 @@
                 :status='false'
                 v-on:mark-done="completeTask($event)"
                 v-on:remove="todos.splice(index, 1)"
+                v-on:edit-item="editItem($event)"
       ></the-list>
     </ul>
     <new-item></new-item>
@@ -34,6 +35,10 @@ export default {
   methods: {
     completeTask(todo){
       todo.completed = !todo.completed
+    },
+    editItem(edits){
+      edits.todo.name = edits.newName
+      edits.todo.description = edits.newDescription
     }
   }
 };
