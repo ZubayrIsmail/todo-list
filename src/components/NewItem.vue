@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <b-form @submit="onSubmit" @reset="onReset" v-if="show">
+  <div align="center">
+    <b-form @submit="onSubmit" @reset="onReset" v-if="show" style="max-width: 50rem;" align="center">
       <b-form-group id="input-group-1" label="New Todo:" label-for="input-1">
         <b-form-input
             id="input-1"

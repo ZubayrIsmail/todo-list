@@ -16,11 +16,12 @@ export default {
     TheList,
     NewItem
   },
-  computed:
-      mapState({
-    todos: state =>state.todos,
+  computed: {
+    ...mapState({
+               todos: state => state.todos,
     todoAlias: 'todos'
 
-  })
+})
+}
 };
 </script>

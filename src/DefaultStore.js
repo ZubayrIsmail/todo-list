@@ -3,7 +3,7 @@ export default {
         {
             id: 1,
             name:"Wake up",
-            completed: true,
+            completed: false,
             description: "Waking up is the most important part of any day"
         },
         {
