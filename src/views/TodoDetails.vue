@@ -1,6 +1,6 @@
 <template>
 <div>
-  <div v-if="!editing">
+  <div v-if="!editing && todoItem" >
     <h1>{{ todoItem.name }}</h1>
     <p>{{ todoItem.description }}</p>
     <router-link to="/">
@@ -51,7 +51,6 @@ export default {
   computed: {
     ...mapState({
       todos: state => state.todos,
-      todoAlias: 'todos'
     }),
     todoItem () {
       return this.todos.find(
