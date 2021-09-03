@@ -19,7 +19,7 @@ export default new Vuex.Store({
   mutations: {
     addNewTodo (state, payload) {
       state.todos.push({
-        id: Object.keys(state.todos).length + 1,
+        id: Object.keys(state.todos).length + 2,
         name: payload.name,
         description: payload.description,
         completed:false
