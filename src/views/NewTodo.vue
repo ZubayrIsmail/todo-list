@@ -1,30 +1,26 @@
 <template>
-  <div class="home">
+  <div>
     <h1> The Todo List </h1>
     <b-container>
       <status-bar></status-bar>
-      <list-todos :status="'todo'"></list-todos>
+      <list-todos :status="'new'"></list-todos>
     </b-container>
   </div>
 </template>
 
 <script>
-
-
 import ListTodos from "../components/ListTodos";
 import StatusBar from "../components/StatusBar";
 
 export default {
-  name: "Home",
-  data () {
-    return {
-      doneCount: 0
-    }
-  },
+  name: "NewTodo",
   components: {
-    ListTodos,
-    StatusBar
-  },
-
-};
+    StatusBar,
+    ListTodos
+  }
+}
 </script>
+
+<style scoped>
+
+</style>
