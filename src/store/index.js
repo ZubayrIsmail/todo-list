@@ -29,6 +29,15 @@ export default new Vuex.Store({
     deleteTodo (state, payload) {
       state.todos.splice(payload,1)
     },
+    addNewTodo (state, payload) {
+      state.todos.push({
+            id: Object.keys(state.todos).length + 2,
+            name: payload.name,
+            description: payload.description,
+            completed:false
+          }
+      )
+    },
   },
   actions: {},
   modules: {},
